@@ -382,8 +382,40 @@ SKILLS SECTION
     background: var(--dark-bg);
 }
 
+.skill-category {
+    background: var(--dark-bg-tertiary);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(99, 102, 241, 0.1);
+    transition: var(--transition-smooth);
+    height: 100%;
+}
+
+.skill-category:hover {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-5px);
+}
+
+.skill-category h4 {
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+}
+
+.skill-category h4 i {
+    color: var(--primary-color);
+}
+
 .skill-item {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.skill-item:last-child {
+    margin-bottom: 0;
 }
 
 .skill-label {
@@ -626,38 +658,352 @@ footer p {
 
 /* 
 ====================================
-RESPONSIVE DESIGN
+SOCIAL LINKS
 ====================================
 */
-@media (max-width: 768px) {
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: var(--dark-bg-tertiary);
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    transition: var(--transition-smooth);
+    border: 2px solid transparent;
+}
+
+.social-link:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-light);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+    color: white;
+}
+
+/* 
+====================================
+CONTACT INFO
+====================================
+*/
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    transition: var(--transition-smooth);
+}
+
+.contact-item:hover {
+    color: var(--primary-light);
+}
+
+.contact-item i {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+}
+
+/* 
+====================================
+FOOTER SOCIAL
+====================================
+*/
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.footer-social .social-link {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    background: var(--dark-bg-tertiary);
+}
+
+/* 
+====================================
+RESPONSIVE DESIGN - MOBILE FIRST
+====================================
+*/
+
+/* Extra Small Devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        line-height: 1.2;
     }
 
     .hero-subtitle {
-        font-size: 1.2rem;
+        font-size: 1rem;
+        padding: 0 1rem;
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
     }
 
-    .nav-link {
-        margin: 0.25rem 0;
+    .btn-custom {
+        display: block;
+        width: 100%;
+        margin: 0.5rem 0;
+        padding: 0.75rem 1.5rem;
+        font-size: 0.85rem;
+    }
+
+    .btn-custom.ms-3 {
+        margin-left: 0 !important;
     }
 
     .profile-image {
-        max-width: 250px;
-        margin-bottom: 2rem;
+        max-width: 200px;
+        margin-bottom: 1.5rem;
     }
 
     .about-content {
         text-align: center;
     }
 
+    .about-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+    }
+
+    .project-image {
+        height: 180px;
+    }
+
+    .project-title {
+        font-size: 1.25rem;
+    }
+
+    .contact-form {
+        padding: 0 0.5rem;
+    }
+
+    .social-links {
+        gap: 1rem;
+    }
+
+    .social-link {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    footer {
+        padding: 1.5rem 0;
+    }
+
+    footer p {
+        font-size: 0.85rem;
+    }
+
+    /* Navbar mobile improvements */
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+
+    .navbar-collapse {
+        background: var(--dark-bg-secondary);
+        padding: 1rem;
+        border-radius: 10px;
+        margin-top: 0.5rem;
+    }
+
+    .nav-link {
+        margin: 0.25rem 0;
+        padding: 0.75rem 1rem !important;
+        text-align: center;
+    }
+
+    /* Hero section mobile height fix */
+    #home {
+        min-height: 100vh;
+        height: auto;
+        padding: 100px 0 60px;
+    }
+
+    /* About section mobile padding */
+    #about {
+        padding: 3rem 0;
+    }
+
+    /* Projects section mobile */
+    #projects {
+        padding: 3rem 0;
+    }
+
+    .project-body {
+        padding: 1rem;
+    }
+
+    /* Contact section mobile */
+    #contact {
+        padding: 3rem 0;
+    }
+
+    .form-control {
+        padding: 0.75rem 1rem;
+    }
+}
+
+/* Small Devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .hero-title {
+        font-size: 2.75rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.15rem;
+    }
+
+    .section-title {
+        font-size: 2.25rem;
+    }
+
     .btn-custom {
-        display: block;
-        margin: 0.5rem 0;
+        padding: 0.75rem 1.5rem;
+    }
+
+    .profile-image {
+        max-width: 280px;
+    }
+
+    .project-image {
+        height: 220px;
+    }
+}
+
+/* Medium Devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.35rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .profile-image {
+        max-width: 320px;
+    }
+
+    .project-image {
+        height: 240px;
+    }
+}
+
+/* Large Devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .hero-title {
+        font-size: 4.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 3rem;
+    }
+
+    .profile-image {
+        max-width: 350px;
+    }
+}
+
+/* Extra Large Devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+
+    .hero-title {
+        font-size: 5rem;
+    }
+}
+
+/* Handle very small devices */
+@media (max-width: 360px) {
+    .hero-title {
+        font-size: 1.75rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Handle devices with notches or safe areas */
+@supports (padding-top: env(safe-area-inset-top)) {
+    .navbar {
+        padding-top: max(1rem, env(safe-area-inset-top));
+    }
+
+    #home {
+        padding-top: max(100px, env(safe-area-inset-top) + 80px);
+    }
+}
+
+/* Landscape orientation on mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    #home {
+        min-height: auto;
+        padding: 100px 0 40px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* High DPI/Retina displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .profile-image {
+        image-rendering: -webkit-optimize-contrast;
     }
 }
 
